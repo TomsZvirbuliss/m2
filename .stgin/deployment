@@ -1,0 +1,9 @@
+[development-start]
+cd /var/www/dev/www
+git pull origin development
+[development-end]
+
+[staging-start]
+cd /var/www/staging/www
+git pull origin staging
+[staging-end]
