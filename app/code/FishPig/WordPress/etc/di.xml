@@ -11,7 +11,7 @@
         <arguments>
             <argument name="integrationTestPool" xsi:type="array">
                 <item name="mode" xsi:type="object">FishPig\WordPress\App\Integration\Test\DBTest</item>
-                <item name="theme" xsi:type="object">FishPig\WordPress\App\Integration\Test\ThemeTest</item>                
+                <item name="theme" xsi:type="object">FishPig\WordPress\App\Integration\Test\ThemeTest</item>
                 <item name="url" xsi:type="object">FishPig\WordPress\App\Integration\Test\UrlTest</item>
                 <item name="api" xsi:type="object">FishPig\WordPress\App\Integration\Test\ApiTest</item>
                 <item name="permalink" xsi:type="object">FishPig\WordPress\App\Integration\Test\PermalinkTest</item>
@@ -113,7 +113,7 @@
             <argument name="dataSource" xsi:type="object">FishPig\WordPress\App\Taxonomy</argument>
             <argument name="factoryClass" xsi:type="string">FishPig\WordPress\Model\TaxonomyFactory</argument>
         </arguments>
-    </type>   
+    </type>
     <!--
     /**
      * Models
@@ -326,7 +326,7 @@
         </arguments>
     </type>
     <!--
-        
+
     -->
     <type name="FishPig\WordPress\App\HTTP\RequestManager">
         <arguments>
@@ -336,7 +336,7 @@
     <type name="FishPig\WordPress\App\HTTP\ClientFactory">
         <arguments>
             <argument name="instanceName" xsi:type="string">FishPig\WordPress\App\HTTP\Client\Curl</argument>
-        </arguments>        
+        </arguments>
     </type>
     <type name="FishPig\WordPress\App\Api\Rest\RequestManager">
         <arguments>
