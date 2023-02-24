@@ -85,7 +85,7 @@ class ResourceConnection
             $this->connection[$storeId] = false;
 
             $config = $this->connectionConfigRetriever->getConfig();
-
+            
             if (isset($config['ssl'])) {
                 if ((int)$config['ssl'] !== 0) {
                     if (empty($config['driver_options'])) {
@@ -105,7 +105,7 @@ class ResourceConnection
             $db->query(
                 $db->quoteInto('SET NAMES ?', $config['charset'])
             );
-            
+
             unset($config['driver_options']);
             // phpcs:ignore -- not cryptographic
             $tablesExistCacheKey = md5($storeId . '::' . implode(':', $config));
@@ -120,7 +120,7 @@ class ResourceConnection
                         ->where('table_name  = ?', $targetTable)
                         ->limit(1)
                 );
-   
+
                 if (!$tableExists) {
                     throw new \FishPig\WordPress\App\Exception(
                         "Database connected but table '$targetTable' does not exist."
@@ -143,7 +143,7 @@ class ResourceConnection
     {
         // This setups up the connection
         $this->isConnected();
-        
+
         $storeId = (int)$this->storeManager->getStore()->getId();
 
         if (isset($this->legacyTableMap[$table])) {
@@ -166,7 +166,7 @@ class ResourceConnection
 
         return $this->tableMap[$storeId][$table] = $mappedTable;
     }
-    
+
     /**
      * @return string
      */
