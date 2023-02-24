@@ -19,13 +19,13 @@ class ConfigRetriever extends \FishPig\WordPress\App\Integration\Mode\ObjectReso
             $this->getConfigDefaults(),
             (array)$this->getObject()->getDatabaseConfig()
         );
-        
+
         if ($missingFields = array_diff_key($this->getRequiredFields(), $config)) {
             throw new \FishPig\WordPress\App\Exception(
                 'Missing database configuration fields: ' . implode(', ', array_flip($missingFields))
             );
         }
-        
+
         return $config;
     }
 
